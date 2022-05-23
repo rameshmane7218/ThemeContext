@@ -1,0 +1,36 @@
+.task {
+  /* Sample  */
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.taskInfo{
+  display: flex;
+  align-items: center;
+}
+.taskInfo input[type="checkbox"]{
+  margin-right: 12px;
+  cursor: pointer;
+}
+.taskCounter{
+  display: flex;
+}
+
+
+
+
+
+.removeBtn{
+  background-color: white;
+  padding: 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.strike{
+  text-decoration: line-through;
+  opacity: 0.6;
+}
