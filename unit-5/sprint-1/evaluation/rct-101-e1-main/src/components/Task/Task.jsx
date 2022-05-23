@@ -3,7 +3,7 @@ import Counter from "../Counter/Counter";
 import styles from "./task.module.css";
 import removelogo from "../../assets/remove.svg";
 
-const Task = ({data,removeItem,completed}) => {
+const Task = ({data,removeItem,completed,increament,decreament}) => {
   // NOTE: do not delete `data-cy` key value pair
   // console.log(data);
   const [isCompleted,setIscompleted] = React.useState(data.done)
@@ -24,7 +24,7 @@ const Task = ({data,removeItem,completed}) => {
       </div>
       <div className={styles.taskCounter}>
         {/* Counter here */}
-        <Counter data={data} />
+        <Counter data={data} increament={increament} decreament={decreament} />
         <button data-cy="task-remove-button" className={styles.removeBtn} title="Remover item" onClick={()=>removeItem(data.id)}>
           <img src={removelogo} alt="Remove Logo" />
         </button>

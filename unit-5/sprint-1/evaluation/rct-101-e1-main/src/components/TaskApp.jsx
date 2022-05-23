@@ -8,7 +8,7 @@ import data from "../data/tasks.json";
 
 
 const TaskApp = () => {
-  const [todo, setTodo] = React.useState("")
+  // const [todo, setTodo] = React.useState("")
   const [task, setTask] = React.useState(data);
   // NOTE: do not delete `data-cy` key value pair
   const removeItem = (value)=>{
@@ -28,14 +28,42 @@ const TaskApp = () => {
     // console.log(newTodo);
     setTask(newTodo);
   }
+  const  increament = (value) =>{
+    let newTodo = task.map((todo)=>{
+      if(todo.id === value){
+        let preCount = todo.count;
+        todo.count = preCount+1;
+        // console.log("hurray",todo);
+      }
+      return todo;
+    })
+    // console.log(newTodo);
+    setTask(newTodo);
+  }
+  const  decreament = (value) =>{
+    let newTodo = task.map((todo)=>{
+      if(todo.id === value){
+        let preCount = todo.count;
+        if(preCount === 1){
+          todo.count = preCount;
+        }else{
+          todo.count = preCount-1;
+        }
+        // console.log("hurray",todo);
+      }
+      return todo;
+    })
+    // console.log(newTodo);
+    setTask(newTodo);
+  }
   return (
     <div data-cy="task-app" className={styles.taskApp}>
       {/* Header */}
       <TaskHeader data={task} />
       {/* Add Task */}
-      <AddTask data={task} setData={setTask} todo={todo} setTodo={setTodo}/>
+      <AddTask data={task} setData={setTask}/>
       {/* Tasks */}
-      <Tasks data={task} removeItem={removeItem} completed={completed}/>
+      <Tasks data={task} removeItem={removeItem} completed={completed}  increament={increament} decreament={decreament} />
     </div>
   );
 };

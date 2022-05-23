@@ -3,14 +3,14 @@ import Task from "../Task/Task";
 import styles from "./tasks.module.css";
 import emptylogo from "../../assets/empty.svg";
 
-const Tasks = ({data,removeItem,completed}) => {
+const Tasks = ({data,removeItem,completed,increament,decreament}) => {
   // NOTE: do not delete `data-cy` key value pair
   return (
     <div className={styles.taskApp}>
       <ul data-cy="tasks" className={styles.tasks}>
         {/* Task List */}
         {data.map((task)=>(
-          <Task key={task.id} data={task} removeItem={removeItem} completed={completed}/>
+          <Task key={task.id} data={task} removeItem={removeItem} completed={completed}  increament={increament} decreament={decreament} />
         ))}
       </ul>
       <div data-cy="tasks-empty" className={styles.empty} style={{display:data.length === 0 ? "block":"none"}}>

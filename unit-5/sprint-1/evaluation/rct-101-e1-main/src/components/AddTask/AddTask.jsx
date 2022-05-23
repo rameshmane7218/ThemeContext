@@ -2,19 +2,23 @@ import React from "react";
 import styles from "./addTask.module.css";
 import {v4 as uuidv4} from "uuid";
 
-const AddTask = ({data,setData,todo,setTodo}) => {
+const AddTask = ({data,setData}) => {
+  const [todo, setTodo] = React.useState("")
+
   // NOTE: do not delete `data-cy` key value pair
  
   const handleInput = (e)=>{
     // console.log(e.target.value);
-    setTodo(e.target.value)
+    setTodo(e.target.value);
+    // e.target.value="";
   }
 
   const addTodo = (value)=>{
     // console.log(value);
     let flag = true;
     if(value.trim()==""){
-      flag =false
+      flag =false;
+      
     }
     let ans = data.filter((data)=>{
       if(data.text == value){
@@ -34,11 +38,12 @@ const AddTask = ({data,setData,todo,setTodo}) => {
         }
       ])
     }
+    setTodo("");
   }
   // console.log(todo);
   return (
     <div className={styles.todoForm}>
-      <input data-cy="add-task-input" type="text" placeholder="Add Task..." onChange={handleInput}/>
+      <input data-cy="add-task-input" type="text" value={todo} placeholder="Add Task..." onChange={handleInput}/>
       <button data-cy="add-task-button" onClick={()=>addTodo(todo)}>+</button>
     </div>
   );
