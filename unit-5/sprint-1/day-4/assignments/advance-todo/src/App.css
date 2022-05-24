@@ -1,0 +1,66 @@
+
+.MainDiv {
+  max-width: 400px;
+  /* border: 1px solid red; */
+  margin: auto;
+  /* padding: 20px; */
+  text-align: center;
+}
+
+.inputBox {
+  position: relative;
+  margin-bottom: 20px;
+}
+.inputBox input {
+  width: 355px;
+  height: 45px;
+  padding-left: 40px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #556b46ca;
+  color: white;
+}
+.inputBox input::placeholder{
+  color: whitesmoke;
+}
+.inputBox > i {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  color: white;
+  opacity: 0.8;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background-color: whitesmoke;
+  margin: 2px 0;
+  border-radius: 5px;
+}
+.todoItem:hover {
+  background-color: rgba(187, 241, 236, 0.904);
+}
+.completedItem {
+  background-color: rgba(245, 245, 245, 0.863);
+}
+.completedItem:hover {
+  background-color: rgba(233, 233, 233, 0.705);
+}
+.todoItem > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.todoItem button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.todoItem i {
+  font-size: 16px;
+}
