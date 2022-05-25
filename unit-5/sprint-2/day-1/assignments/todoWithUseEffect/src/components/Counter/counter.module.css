@@ -1,0 +1,21 @@
+.counter {
+  /* TODO */
+  border: 1px solid rgb(239, 238, 238);
+  border-radius: 4px;
+}
+
+.counter>button{
+  padding: 8px 12px;
+  margin: 0;
+  font-size: 14px;
+  background-color: #8197e8;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+.counter span{
+  margin: 0 8px;
+  
+}
