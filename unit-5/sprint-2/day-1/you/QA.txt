@@ -1,0 +1,32 @@
+Completed:
+- What is React ?
+    Javascript library use for building UI components.
+
+- What is Vertual DOM ?
+    in memory representation of actual done
+
+- Why does JS updated not get reflected in DOM when working with react ?
+    JS variables then dom id not updated when variable value  changes, hooks for state management.
+
+
+
+-Hooks
+    - useState management      
+        creating and updation a variable in dom 
+
+
+- What is Rest API 
+
+- What is URL
+    Local URL
+        localhost
+        127.0.0.1 
+        192.168.0.1 
+    Global URL
+
+
+
+React as more than 10 hooks
+
+useEffect - creation and updation of a state variable 
+

@@ -65,7 +65,9 @@ const TaskApp = () => {
       {/* Tasks */}
       <Tasks data={task} removeItem={removeItem} completed={completed}  increament={increament} decreament={decreament} />
     </div>
+  
   );
 };
 
 export default TaskApp;
+

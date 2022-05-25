@@ -1,0 +1,64 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "value": "Local Todo 1",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "value": "Local Todo 2",
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "value": "Local Todo 3",
+      "isCompleted": false
+    },
+    {
+      "id": 4,
+      "value": "Local Todo 4",
+      "isCompleted": false
+    },
+    {
+      "value": "",
+      "isCompleted": false,
+      "id": 5
+    },
+    {
+      "value": "raemsh",
+      "isCompleted": false,
+      "id": 6
+    },
+    {
+      "value": "",
+      "isCompleted": false,
+      "id": 7
+    },
+    {
+      "value": "fa;sfkds",
+      "isCompleted": false,
+      "id": 8
+    },
+    {
+      "value": "fdsafdsa",
+      "isCompleted": false,
+      "id": 9
+    },
+    {
+      "value": "ramesh",
+      "isCompleted": false,
+      "id": 10
+    },
+    {
+      "value": "ramesh",
+      "isCompleted": false,
+      "id": 11
+    },
+    {
+      "value": "new Todo",
+      "isCompleted": false,
+      "id": 12
+    }
+  ]
+}

@@ -28,8 +28,14 @@
   outline: none;
   border: none;
   cursor: pointer;
+  opacity: 0;
 }
-
+/* .removeBtn:hover{
+  opacity: 1;
+} */
+.displaybtn{
+  opacity: 1;
+}
 .strike{
   text-decoration: line-through;
   opacity: 0.6;
