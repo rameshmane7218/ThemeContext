@@ -1,0 +1,13 @@
+// why
+// where
+// when
+
+1. useState
+    to create state variable and to re-render dom when the value changes
+
+2. useEffect 
+    when we want to do something on mounting, updating or unmounting phase
+
+3. useRef
+    create state variable which persist the state information and do not trigger re-render when updated.
+
