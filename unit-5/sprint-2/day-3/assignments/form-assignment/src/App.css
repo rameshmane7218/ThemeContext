@@ -1,0 +1,6 @@
+.App {
+  margin: auto;
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 10px;
+}

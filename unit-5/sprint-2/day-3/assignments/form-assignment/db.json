@@ -1,0 +1,84 @@
+{
+  "employeeData": [
+    {
+      "name": "Ramesh Mane",
+      "address": "Vathar tarf vadgaon",
+      "age": "23",
+      "department": "IoT",
+      "salary": "23432432",
+      "maritalStatus": "Single",
+      "profilePhoto": "blob:http://localhost:3000/336a10bd-2d7f-4451-a715-75bffbb24ae0",
+      "id": 5
+    },
+    {
+      "name": "Vithoba Mane",
+      "address": "Vathar tarf vadgaon",
+      "age": "23",
+      "department": "IoT",
+      "salary": "23432432",
+      "maritalStatus": "Married",
+      "profilePhoto": "blob:http://localhost:3000/9fac348f-e715-4ca7-99c9-a16ad1846e07",
+      "id": 6
+    },
+    {
+      "name": "Ramesh Mane",
+      "address": "Vathar tarf vadgaon",
+      "age": "23",
+      "department": "IoT",
+      "salary": "23432432",
+      "maritalStatus": "Married",
+      "profilePhoto": "blob:http://localhost:3000/064f2bee-5ade-4b96-b7c6-4bc464df61c9",
+      "id": 7
+    },
+    {
+      "name": "Ramesh Mane",
+      "address": "Vathar tarf vadgaon",
+      "age": "23",
+      "department": "IoT",
+      "salary": "23432432",
+      "maritalStatus": "Married",
+      "profilePhoto": "blob:http://localhost:3000/064f2bee-5ade-4b96-b7c6-4bc464df61c9",
+      "id": 8
+    },
+    {
+      "name": "Ramesh Mane",
+      "address": "Vathar tarf vadgaon",
+      "age": "23",
+      "department": "IoT",
+      "salary": "23432432",
+      "maritalStatus": "Married",
+      "profilePhoto": "blob:http://localhost:3000/064f2bee-5ade-4b96-b7c6-4bc464df61c9",
+      "id": 9
+    },
+    {
+      "name": "Ramesh Mane",
+      "address": "Vathar tarf vadgaon",
+      "age": "23",
+      "department": "IoT",
+      "salary": "23432432",
+      "maritalStatus": "Married",
+      "profilePhoto": "blob:http://localhost:3000/064f2bee-5ade-4b96-b7c6-4bc464df61c9",
+      "id": 10
+    },
+    {
+      "name": "Ramesh Mane",
+      "address": "Vathar tarf vadgaon",
+      "age": "23",
+      "department": "IoT",
+      "salary": "23432432",
+      "maritalStatus": "Single",
+      "profilePhoto": "blob:http://localhost:3000/651b195a-a956-4852-88ed-61a6eb01297f",
+      "id": 11
+    },
+    {
+      "name": "Ramesh Mane",
+      "address": "Vathar tarf vadgaon",
+      "age": "23",
+      "department": "IoT",
+      "salary": "23432432",
+      "maritalStatus": "Single",
+      "profilePhoto": "blob:http://localhost:3000/651b195a-a956-4852-88ed-61a6eb01297f",
+      "id": 12
+    }
+  ]
+}
