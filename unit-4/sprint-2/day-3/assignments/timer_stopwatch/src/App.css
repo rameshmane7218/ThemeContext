@@ -1,0 +1,28 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  /* border: 1px solid red; */
+  width: 700px;
+  margin: auto;
+  margin-top: 50px;
+}
+.mainContainer{
+  border: 1px solid #3c4043;
+  border-radius: 10px;
+}
+.container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #3c4043;
+  padding-top: 20px;
+}
+.box {
+  height: 100%;
+  width: 50%;
+  color: #8ab4f8;
+  /* padding-top: 25px; */
+}
+.active {
+  border-bottom: 2px solid #8ab4f8;
+}
