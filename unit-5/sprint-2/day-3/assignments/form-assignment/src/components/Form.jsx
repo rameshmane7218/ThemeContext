@@ -26,7 +26,7 @@ const Form = ({employeeData,setEmployeeData,getData}) => {
     const { type, name, value, files } = e.target;
 
     if (type === "file") {
-      imgUrl.current = URL.createObjectURL(files[0]);
+      imgUrl.current = `URL.createObjectURL(files[0])`;
       // console.log(files[0]);
       setForm({ ...form, [name]: imgUrl.current });
     } else {

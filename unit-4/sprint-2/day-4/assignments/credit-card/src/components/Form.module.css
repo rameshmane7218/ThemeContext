@@ -1,0 +1,32 @@
+.formControl Input {
+  border-bottom: 1px solid pink;
+}
+.formLabel {
+  margin: 10px 0 0 0;
+}
+
+.inputGroup i {
+  color: rgba(240, 107, 107, 0.699);
+  text-align: left;
+  font-size: 14px;
+  margin-left: -10px;
+}
+.submitBtn {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.submitBtn label {
+  text-align: center;
+}
+.submitBtn input {
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.submitBtn label span {
+  color: red;
+  font-size: 18px;
+}

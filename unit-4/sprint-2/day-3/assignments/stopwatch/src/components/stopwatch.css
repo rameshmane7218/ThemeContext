@@ -1,0 +1,17 @@
+#stopwatch {
+  /* border: 1px solid black; */
+  width: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+  font-weight: 400;
+}
+#stopwatch div {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 80px;
+}
