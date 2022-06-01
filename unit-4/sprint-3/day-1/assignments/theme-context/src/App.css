@@ -19,7 +19,7 @@
  
 }
 .mainContainer{
-  width: 700px;
+  width: 700px !important;
   margin: auto;
   margin-top: 50px;
   border: 1px solid #3c4043;
@@ -41,4 +41,23 @@
 .active {
   border-bottom: 2px solid #8ab4f8;
   color: #8ab4f8;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.navbar img{
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+}
+.themeBtn{
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  
 }

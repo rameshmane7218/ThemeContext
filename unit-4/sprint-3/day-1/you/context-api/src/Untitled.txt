@@ -1,0 +1,24 @@
+<Amazon>
+    <Navbar>
+        <Logo/>
+        <Addresss/>
+        <Search/>
+        <Country/>
+        <Cart>
+            {products.length}
+            <Product> List
+        </Cart>
+    </Navbar>
+    <Header/>
+    <Subheader/>
+    <Products>
+        <ProductsFilter/>
+        <Product key="2">
+            <Button>Add to cart</Button> if i clickd this button then we need to change count of card which is in navbar 
+        </Product>
+    </Products>
+</Amazon>
+
+
+// redux // not by facebook
+// context api was invented in 2018 by facebook 

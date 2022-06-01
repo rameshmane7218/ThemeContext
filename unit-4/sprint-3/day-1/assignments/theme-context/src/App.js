@@ -1,15 +1,20 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./App.css";
 import Timer from "./components/Timer/Timer";
 import Stopwatch from "./components/Stopwatch/Stopwatch";
+import { ThemeContext } from "./context/ThemeContext";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
+  const {isLight} = useContext(ThemeContext);
+ 
   const [show, setShow] = React.useState(false);
   const handletoggle = () => {
     setShow(!show);
   };
   return (
-    <div className="App dark">
+    <div className={`App ${isLight?'light':'dark'}`}>
+      <Navbar/>
       {/* <h1>Google StopWtach And Timer</h1> */}
       <div className="mainContainer">
         <div className="container">
@@ -29,4 +34,3 @@ function App() {
 
 export default App;
 
-// comment
