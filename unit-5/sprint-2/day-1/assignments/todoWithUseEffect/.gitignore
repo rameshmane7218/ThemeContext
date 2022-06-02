@@ -25,4 +25,3 @@ yarn-error.log*
 # cypress
 cypress/
 /cypress.json
-# db.json
