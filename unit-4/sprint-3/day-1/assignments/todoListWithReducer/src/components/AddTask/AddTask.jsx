@@ -1,45 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./addTask.module.css";
 import { v4 as uuidv4 } from "uuid";
+import { ReducerContext } from "../../context/ReducerContext";
 
-const AddTask = ({ data, setData }) => {
+const AddTask = () => {
+  const {task, setTask} = useContext(ReducerContext);
   const [todo, setTodo] = React.useState("");
 
   // NOTE: do not delete `data-cy` key value pair
 
   const handleInput = (e) => {
-    // console.log(e.target.value);
     setTodo(e.target.value);
-    // e.target.value="";
   };
 
   const addTodo = (value) => {
-    // console.log(value);
+    
     let flag = true;
     if (value.trim() == "") {
       flag = false;
     }
-    let ans = data.filter((data) => {
+    let ans = task.filter((data) => {
       if (data.text == value) {
         flag = false;
       }
       return false;
     });
-    // console.log(flag);
+
     if (flag) {
-      setData([
-        ...data,
-        {
-          id: uuidv4(),
-          text: value,
-          done: false,
-          count: 1,
-        },
-      ]);
+      setTask({type:"addItem", value})
     }
     setTodo("");
   };
-  // console.log(todo);
+
   return (
     <div className={styles.todoForm}>
       <input

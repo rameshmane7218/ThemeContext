@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Task from "../Task/Task";
 import styles from "./tasks.module.css";
 import emptylogo from "../../assets/empty.svg";
+import { ReducerContext } from "../../context/ReducerContext";
 
-const Tasks = ({data,removeItem,completed,increament,decreament}) => {
+const Tasks = () => {
   // NOTE: do not delete `data-cy` key value pair
+  const {task} = useContext(ReducerContext);
   return (
     <div className={styles.taskApp}>
       <ul data-cy="tasks" className={styles.tasks}>
         {/* Task List */}
-        {data.map((task)=>(
-          <Task key={task.id} data={task} removeItem={removeItem} completed={completed}  increament={increament} decreament={decreament} />
+        {task.map((item)=>(
+          <Task key={item.id} data={item}/>
         ))}
       </ul>
-      <div data-cy="tasks-empty" className={styles.empty} style={{display:data.length === 0 ? "block":"none"}}>
+      <div data-cy="tasks-empty" className={styles.empty} style={{display:task.length === 0 ? "block":"none"}}>
         {/* Show when No Tasks are present */}
         <img src={emptylogo} alt="emptylogo" />
         <p><b>Empty list</b></p>
