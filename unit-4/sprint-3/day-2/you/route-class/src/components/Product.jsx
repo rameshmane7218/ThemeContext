@@ -14,11 +14,11 @@ const Product = () => {
 
       fetchProducts();
     }
-    console.log("indisde")
+    console.log("inside")
   }, []);
   return <div>
       Product id: {id}
-      <div>{product.name}</div>
+      <div>Name{product.name}</div>
   </div>;
 };
 

@@ -20,7 +20,6 @@ const Products = () => {
     <div>
       Products:{" "}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-        <Outlet/>
           <div>
             {products.map((p) => (
               <div key={p.id}>
@@ -30,6 +29,7 @@ const Products = () => {
               </div>
             ))}
           </div>
+            <Outlet/>
         {/* <Outlet/> */}
       </div>
     </div>

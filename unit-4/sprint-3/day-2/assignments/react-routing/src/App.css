@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+.tableDiv >div{
+  /* border: 1px solid red; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.tableDiv table{
+ border-collapse: collapse;
+ border-spacing: 0px;
+}
+.tableDiv table th,td{
+ padding: 5px 10px;
+}

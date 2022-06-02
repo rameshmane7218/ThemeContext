@@ -1,0 +1,30 @@
+.taskApp{
+  padding: 32px 24px;
+}
+
+.tasks {
+  /* sample */
+  padding-inline-start: 0;
+  margin: 0;
+}
+.tasks li:first-child{
+  padding-top: 0;
+}
+.tasks li:last-child{
+  padding-bottom: 0;
+}
+
+.empty {
+  /* sample */
+  margin: auto;
+  text-align: center;
+}
+.empty img{
+  /* sample */
+  height: 50px;
+  width: 60px;
+  opacity: 0.7;
+}
+.empty p{
+  margin-top: 0;
+}
