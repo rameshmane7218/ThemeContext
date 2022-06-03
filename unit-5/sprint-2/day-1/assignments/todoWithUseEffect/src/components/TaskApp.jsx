@@ -17,7 +17,7 @@ const TaskApp = ({
   console.log("disablelastPage", disablelastPage);
 
   const removeItem = (value) => {
-    fetch(`http://localhost:8080/todos/${value}`, {
+    fetch(`${process.env.REACT_APP_BASE_URL}/todos/${value}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const TaskApp = ({
 
   const handleDoneStatus = (value, status) => {
     // console.log("completed",value,status);
-    fetch(`http://localhost:8080/todos/${value}`, {
+    fetch(`${process.env.REACT_APP_BASE_URL}/todos/${value}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const TaskApp = ({
 
   const handleCounter = (value, countValue) => {
     // console.log(value,countValue);
-    fetch(`http://localhost:8080/todos/${value}`, {
+    fetch(`${process.env.REACT_APP_BASE_URL}/todos/${value}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

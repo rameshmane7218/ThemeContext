@@ -9,11 +9,10 @@ function App() {
   React.useEffect(() => {
     getTodos(page);
   }, [page]);
-  
 
   const getTodos = (page) => {
-    console.log("pageNO is:",page)
-    fetch(`http://localhost:8080/todos?_page=${page}&_limit=5`)
+    console.log("pageNO is:", page);
+    fetch(`${process.env.REACT_APP_BASE_URL}/todos?_page=${page}&_limit=5`)
       .then((res) => res.json())
       .then((data) => {
         // console.log("no of Items", data.length);
@@ -29,6 +28,9 @@ function App() {
   return (
     <div>
       {/* Code Here */}
+      <div style={{ textAlign: "center" }}>
+        <div> {process.env.REACT_APP_BASE_URL}</div>
+      </div>
       <TaskApp
         task={task}
         setTask={setTask}

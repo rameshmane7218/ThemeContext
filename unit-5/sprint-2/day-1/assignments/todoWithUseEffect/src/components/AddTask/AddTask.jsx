@@ -32,7 +32,7 @@ const AddTask = ({ data, setData, getTodos, page }) => {
 
     // console.log("isDuplicate",isDuplicate);
     if (value.trim().length && isDuplicate) {
-      fetch("http://localhost:8080/todos", {
+      fetch(`${process.env.REACT_APP_BASE_URL}/todos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
