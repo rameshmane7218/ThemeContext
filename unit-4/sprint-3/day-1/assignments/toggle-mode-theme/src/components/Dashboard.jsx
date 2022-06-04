@@ -1,12 +1,8 @@
-import {
-  FormLabel,
-  Heading,
-  Switch,
-  Text,
-  useColorMode,
-} from "@chakra-ui/react";
+import { FormLabel, Heading, Switch } from "@chakra-ui/react";
 import React from "react";
+import { useContext } from "react";
 import styled from "styled-components";
+import { ThemeContext } from "../context/ThemeContext";
 
 const TitleDash = styled.div`
   width: 452px;
@@ -23,31 +19,24 @@ const ColorMode = styled.div`
 `;
 
 const Dashboard = () => {
-  const { colorMode, setColorMode, toggleColorMode } = useColorMode();
-  const handleColorMode = (e) => {
-    console.log("color mode", e.target.checked, colorMode);
-    if (e.target.checked) {
-      setColorMode("dark");
-      
-    } else {
-      setColorMode("light");
-      
-    }
-    console.log(typeof localStorage.getItem("theme"));
-  };
+  const { handleColorMode } = useContext(ThemeContext);
   return (
     <TitleDash>
       <div>
-        <Heading fontWeight={500} size='xl' >My Dashboard</Heading>
+        <Heading fontWeight={500} size="xl">
+          My Dashboard
+        </Heading>
       </div>
       <ColorMode>
         <FormLabel htmlFor="switchMode" margin={0} size="sm">
           Dark Mode
         </FormLabel>
         <Switch
-          defaultChecked={localStorage.getItem("chakra-ui-color-mode") == "dark"}
+          defaultChecked={
+            localStorage.getItem("chakra-ui-color-mode") == "dark"
+          }
           size="lg"
-          onChange={handleColorMode}
+          onChange={(e) => handleColorMode(e.target.checked)}
         />
       </ColorMode>
     </TitleDash>

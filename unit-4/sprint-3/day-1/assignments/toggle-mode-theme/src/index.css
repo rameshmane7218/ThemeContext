@@ -6,25 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f2f2f2 !important;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.fadsfd {
-  border: 1px solid green;
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
-  background-image: url("https://cutt.ly/sJbIgmc");
-  background-size: cover;
-  background: linear-gradient(180deg, #679cf6 0%, #4072ee 100%);
-  box-shadow: 0px 5px 15px #acb2c1;
-  border-radius: 5px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .pofile {
@@ -45,24 +32,20 @@ code {
   justify-content: center;
   align-items: center;
 }
-.selectedMenu{
+.selectedMenu {
   background: linear-gradient(180deg, #679cf6 0%, #4072ee 100%);
   /* box-shadow: 0px 5px 15px #acb2c1; */
   box-shadow: 0px 5px 15px rgba(7, 8, 8, 0.5);
   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
   width: 90px;
 }
-.fdsa{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.ScrollingDivMain{
+
+.ScrollingDivMain {
   padding-top: 113px;
   height: 100vh;
   margin-left: 122px;
 }
-.ScrollingDiv{
+.ScrollingDiv {
   /* border: 1px solid red; */
   box-sizing: border-box;
   height: 100%;
@@ -71,6 +54,10 @@ code {
   position: relative;
   overflow-y: scroll;
 }
-.ScrollingDiv::-webkit-scrollbar{
+.ScrollingDiv::-webkit-scrollbar {
   display: none;
+}
+
+.useBox > div:last-child {
+  border-bottom: none;
 }

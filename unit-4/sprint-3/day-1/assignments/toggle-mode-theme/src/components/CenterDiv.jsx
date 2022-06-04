@@ -48,6 +48,7 @@ const UserMore = styled.p`
 const CenterDiv = () => {
   const ActiveUsers = [
     {
+      id:1,
       name: "Elon Tusk",
       location: "California, USA",
       pic: "https://bit.ly/dan-abramov",
@@ -56,6 +57,7 @@ const CenterDiv = () => {
       bgColor: "green",
     },
     {
+      id:2,
       name: "Sandhya",
       location: "Banglore, India",
       pic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO9mB7KbgRmJuh7-N52jvuJ0F0x1PdGKzb5Q&usqp=CAU",
@@ -64,6 +66,7 @@ const CenterDiv = () => {
       bgColor: "messenger",
     },
     {
+      id:3,
       name: "Nrupul Dev",
       location: "Banglore, India",
       pic: "https://bit.ly/dan-abramov",
@@ -86,6 +89,7 @@ const CenterDiv = () => {
         boxSizing="borderBox"
         borderRadius="5px"
         pt='30px'
+        className="useBox"
 
 
       >
@@ -99,6 +103,7 @@ const CenterDiv = () => {
         </Flex>
         {ActiveUsers.map((user) => (
           <Flex
+            key={user.id}
             flexDirection="column"
             gap={2}
             p="25px 30px"

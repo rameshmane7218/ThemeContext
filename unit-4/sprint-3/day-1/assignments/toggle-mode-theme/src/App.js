@@ -11,11 +11,7 @@ function App() {
     <Box
       className="App"
       style={{
-        position: "relative",
-        width: "1240px",
-        height: "100vh",
-        margin: "auto",
-        maxHeight: "1024px",
+        
       }}
       bg={useColorModeValue("#F5F6FA", "#1F2327")}
     >
