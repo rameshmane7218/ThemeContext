@@ -1,14 +1,76 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F2F2F2 !important;
+  background-color: #f2f2f2 !important;
+  font-family: 'Roboto', sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.fadsfd {
+  border: 1px solid green;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  background-image: url("https://cutt.ly/sJbIgmc");
+  background-size: cover;
+  background: linear-gradient(180deg, #679cf6 0%, #4072ee 100%);
+  box-shadow: 0px 5px 15px #acb2c1;
+  border-radius: 5px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.pofile {
+  color: white;
+  border-radius: 50px;
+  font-size: 16px;
+  background-color: #29cb97;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  max-height: 79px;
+}
+.sample {
+  border: 1px solid #dadada;
+  box-sizing: content-box;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selectedMenu{
+  background: linear-gradient(180deg, #679cf6 0%, #4072ee 100%);
+  /* box-shadow: 0px 5px 15px #acb2c1; */
+  box-shadow: 0px 5px 15px rgba(7, 8, 8, 0.5);
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+  width: 90px;
+}
+.fdsa{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.ScrollingDivMain{
+  padding-top: 113px;
+  height: 100vh;
+  margin-left: 122px;
+}
+.ScrollingDiv{
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 911px;
+  /* margin-left: 90px; */
+  position: relative;
+  overflow-y: scroll;
+}
+.ScrollingDiv::-webkit-scrollbar{
+  display: none;
 }
