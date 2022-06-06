@@ -1,8 +1,11 @@
 import { Box, Heading, Text, Button } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const PageNotFound = () => {
   const navigate = useNavigate();
+  const id = useParams();
+  console.log("id", id["*"]);
+
   return (
     <Box
       textAlign="center"

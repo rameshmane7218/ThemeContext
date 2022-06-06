@@ -15,10 +15,14 @@ import Electronics from "./pages/Electronics";
 import MensShoes from "./pages/MensShoes";
 import WomensShoes from "./pages/WomensShoes";
 import KidsShoes from "./pages/KidsShoes";
+import { useState } from "react";
+import Layout from "./components/Layout";
 function App() {
+  const [pageNotFound, setPageNotFound] = useState(true);
+  
   return (
     <div className="App">
-      <Navbar />
+      <Navbar /> 
       <section style={{ paddingTop: "60px" }}>
         <Routes>
           <Route path="*" element={<PageNotFound />} />
@@ -36,6 +40,8 @@ function App() {
           <Route path="/faq" element={<Faq />} />
         </Routes>
       </section>
+      <Layout/>
+
       <Footer />
     </div>
   );
