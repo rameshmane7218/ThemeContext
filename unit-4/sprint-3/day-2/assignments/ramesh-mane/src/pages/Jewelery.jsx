@@ -3,19 +3,19 @@ import React, { useContext, useEffect } from "react";
 import Layout from "../components/Layout";
 import { FetchContext } from "../context/FetchContext";
 
-const Electronics = () => {
+const Jewelery = () => {
   const {getData, products} = useContext(FetchContext);
 
   useEffect(() => {
-    getData("electronics");
+    getData("jewelery");
   }, []);
   // console.log(products)
   return (
     <div>
-      <Heading>Electronics</Heading>
+      <Heading>Jewelery</Heading>
       <Layout products={products} />
     </div>
   );
 };
 
-export default Electronics;
+export default Jewelery;

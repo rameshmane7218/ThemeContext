@@ -1,26 +1,23 @@
 import React from "react";
-import axios from "axios";
-import { useState } from "react";
 import { useEffect } from "react";
 import Layout from "../components/Layout";
+import { Heading } from "@chakra-ui/react";
+import { useContext } from "react";
+import { FetchContext } from "../context/FetchContext";
 
 const MensClothes = () => {
-  const [products, setProducts] = useState([]);
+ const {getData, products} = useContext(FetchContext);
 
-  useEffect(()=>{
-    const getData = async () =>{
-      let res = await axios.get(`https://fakestoreapi.com/products/category/men's%20clothing`);
-      // console.log(res);
-      console.log(res.data);
-      setProducts(res.data);
-    };
-    getData();
-  },[])
-  console.log(products)
-  return <div>
-    MensClothes
-    <Layout products={products}/>
-  </div>;
+  useEffect(() => {
+    getData("men's clothing");
+  }, []);
+  // console.log(products)
+  return (
+    <div>
+      <Heading>Men's Clothes</Heading>
+      <Layout products={products} />
+    </div>
+  );
 };
 
 export default MensClothes;

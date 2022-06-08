@@ -1,0 +1,35 @@
+Q: What is Redux ?
+A: Redux is Predictable State management Tool, build using Flex Architecture 
+
+MVC: V -> C -> M 
+
+Flux: Action -> Dispatcher -> Reducer -> State -> View 
+
+
+Q: What feature does redux provide ?
+A: Predictable, Centralized, Easy Debugging 
+
+// Different types of application 
+small : TodoApp, Counter
+Medium : Routing app, Company website
+    Theme management
+    Authentication
+Large :
+    Authentication  // sign-in, signup, login, logout
+    Themeing // change
+    Product management //add, update, add, remove
+    Profile management
+    Payment management
+    User History management 
+
+
+Q: When do we use Redux ?
+A: Medium to large scale application 
+
+Q: Different parts of redux ?
+A: Action -> Dispatcher -> Reducers -> states
+
+
+
+
+1. Create ActionTypess

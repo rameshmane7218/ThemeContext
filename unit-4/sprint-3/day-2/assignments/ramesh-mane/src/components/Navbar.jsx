@@ -46,36 +46,36 @@ const navItems = [
         subLabel: "Up-and-coming Designers",
         to: "/womens_clothing",
       },
-      {
-        label: "Kids's Clothing",
-        subLabel: "Up-and-coming Designers",
-        to: "/kids_clothing",
-      },
+      // {
+      //   label: "Kids's Clothing",
+      //   subLabel: "Up-and-coming Designers",
+      //   to: "/kids_clothing",
+      // },
     ],
   },
+  // {
+  //   label: "Shoes",
+  //   children: [
+  //     {
+  //       label: "Men's Shoes",
+  //       subLabel: "Trending Design to inspire you",
+  //       to: "/mens_shoes",
+  //     },
+  //     {
+  //       label: "Women's Shoes",
+  //       subLabel: "New Design",
+  //       to: "/womens_shoes",
+  //     },
+  //     {
+  //       label: "Kids's Shoes",
+  //       subLabel: "Trending Design to inspire you",
+  //       to: "/kids_shoes",
+  //     },
+  //   ],
+  // },
   {
-    label: "Shoes",
-    children: [
-      {
-        label: "Men's Shoes",
-        subLabel: "Trending Design to inspire you",
-        to: "/mens_shoes",
-      },
-      {
-        label: "Women's Shoes",
-        subLabel: "New Design",
-        to: "/womens_shoes",
-      },
-      {
-        label: "Kids's Shoes",
-        subLabel: "Trending Design to inspire you",
-        to: "/kids_shoes",
-      },
-    ],
-  },
-  {
-    label: "Beauty",
-    to: "/beauty",
+    label: "Jewelery",
+    to: "/jewelery",
   },
   {
     label: "Electronics",

@@ -10,13 +10,14 @@ import Cart from "./pages/Cart";
 import MensClothes from "./pages/MensClothes";
 import WomensClothes from "./pages/WomensClothes";
 import KidsClothes from "./pages/KidsClothes";
-import Beauty from "./pages/Beauty";
+import Jewelery from "./pages/Jewelery";
 import Electronics from "./pages/Electronics";
 import MensShoes from "./pages/MensShoes";
 import WomensShoes from "./pages/WomensShoes";
 import KidsShoes from "./pages/KidsShoes";
 import { useState } from "react";
 import Layout from "./components/Layout";
+import Product from "./pages/Product";
 function App() {
   const [pageNotFound, setPageNotFound] = useState(true);
   
@@ -28,19 +29,35 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/mens_clothing" element={<MensClothes />} />
+          <Route path="/mens_clothing/:id" element={<Product />} />
+
           <Route path="/womens_clothing" element={<WomensClothes />} />
+          <Route path="/womens_clothing/:id" element={<Product />} />
+
           <Route path="/kids_clothing" element={<KidsClothes />} />
+          <Route path="/kids_clothing/:id" element={<Product />} />
+
           <Route path="/mens_shoes" element={<MensShoes />} />
+          <Route path="/mens_shoes/:id" element={<Product />} />
+
           <Route path="/womens_shoes" element={<WomensShoes />} />
+          <Route path="/womens_shoes/:id" element={<Product />} />
+
           <Route path="/kids_shoes" element={<KidsShoes />} />
-          <Route path="/beauty" element={<Beauty />} />
+          <Route path="/kids_shoes/:id" element={<Product />} />
+
+          <Route path="/jewelery" element={<Jewelery />} />
+          <Route path="/jewelery/:id" element={<Product />} />
+
           <Route path="/electronics" element={<Electronics />} />
+          <Route path="/electronics/:id" element={<Product />} />
+
           <Route path="/cart" element={<Cart />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/faq" element={<Faq />} />
         </Routes>
       </section>
-      <Layout/>
+      
 
       <Footer />
     </div>
