@@ -50,7 +50,7 @@ const TaskApp = ({
       body: JSON.stringify({
         count: countValue,
       }),
-    });
+    }).then((r)=>r.json()).then((d)=>console.log("patch",d))
     getTodos(page);
   };
 

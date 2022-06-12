@@ -1,0 +1,68 @@
+1. Feature 
+    - Auth
+        - Login 
+            - on login go t0 `/`
+        - Logout 
+            - on logout go to `/login`
+    - Feeds Listing Feature 
+
+2. API:
+    - login
+    - get Feeds 
+
+3. Routing Info 
+    - / - protected route accessible after login 
+    - / Login
+
+
+React ? Current page is in react 
+Context API ?
+Redux ? - Selected 
+
+
+1. Action types
+
+LOGIN_LOADING
+LOGIN_SUCCESS
+LOGIN_ERROR
+LOGOUT
+
+GET_FEEDS_LOADING
+GET_FEEDS_SUCCESS
+GET_FEEDS_ERROR
+
+
+2. actions
+
+3. state structure
+{
+    auth: {
+        loading: false,
+        error: false
+        data: {
+            isAuth: false,
+            token: "",
+        }
+    },
+    feeds:{
+        getFeeds : {
+            loading: false,
+            error: false
+        }
+        data:[]
+    }
+}
+
+4. 2 reducer
+    - Auth
+    - Feeds
+
+
+
+ActionTypes - Done
+store - Done
+actions - Done
+initialState - done
+combinereducer - done
+reducer
+thunk

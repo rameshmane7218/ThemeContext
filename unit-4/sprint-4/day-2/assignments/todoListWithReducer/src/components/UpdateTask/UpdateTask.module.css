@@ -1,0 +1,65 @@
+.taskApp {
+  /* Sample */
+  /* border: 1px solid red; */
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  background-color: white;
+}
+.taskHeader {
+  /* Sample */
+  color: white;
+  padding: 32px;
+  font-weight: 700;
+  margin: 0;
+  /* border: 1px solid blue; */
+  text-align: center;
+  background-color: #ccc;
+  background-image: linear-gradient(135deg, #79f1a4 10%, #0e5cad 100%);
+  border-radius: 10px 10px 0 0;
+}
+.taskHeader h1 {
+  font-weight: 700;
+  margin: 0;
+}
+.todoForm {
+  /* Sample */
+  width: 100%;
+  /* border: 1px solid red; */
+  padding-left: 24px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: space-around;
+
+  /* align-items: center; */
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+.todoForm input {
+  height: 50px;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  margin-right: 12px;
+}
+.todoForm button {
+  font-size: 32px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: white;
+  color: #0e5cad;
+  cursor: pointer;
+}
+.todoForm button:hover {
+  color: #252525;
+}
+.taskEdit {
+  padding: 32px 24px;
+  text-align: center;
+}

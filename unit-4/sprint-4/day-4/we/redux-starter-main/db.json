@@ -1,0 +1,8 @@
+{
+  "feeds": [
+    { "id": 1, "title": "Title 1", "description": "Feed 1 Description" },
+    { "id": 2, "title": "Title 2", "description": "Feed 2 Description" },
+    { "id": 3, "title": "Title 3", "description": "Feed 3 Description" },
+    { "id": 4, "title": "Title 4", "description": "Feed 4 Description" }
+  ]
+}

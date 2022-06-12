@@ -1,0 +1,52 @@
+.task {
+  /* Sample  */
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.taskInfo{
+  display: flex;
+  align-items: center;
+}
+.taskInfo input[type="checkbox"]{
+  margin-right: 12px;
+  cursor: pointer;
+}
+.taskCounter{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.taskCounter i{
+  cursor: pointer;
+}
+
+
+
+
+
+.removeBtn{
+  background-color: white;
+  padding: 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+/* .removeBtn:hover{
+  opacity: 1;
+} */
+.displaybtn{
+  opacity: 1;
+}
+.strike{
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.linkTag{
+  text-decoration: none;
+  color: black;
+}
