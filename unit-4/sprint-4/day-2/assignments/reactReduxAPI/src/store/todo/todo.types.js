@@ -16,6 +16,8 @@ export const UPDATE_TODO_STATUS_LOADING = "update/todo/status";
 export const UPDATE_TODO_STATUS_SUCCESS = "update/todo/status";
 export const UPDATE_TODO_STATUS_ERROR = "update/todo/status";
 
-// export const UPDATE_TODO_COUNTER_LOADING = "update/todo/counter";
-// export const UPDATE_TODO_COUNTER_SUCCESS = "update/todo/counter";
-// export const UPDATE_TODO_COUNTER_ERROR = "update/todo/counter";
+export const DELETE_TODO_LOADING = "delete/todo";
+export const DELETE_TODO_SUCCESS = "delete/todo";
+export const DELETE_TODO_ERROR = "delete/todo";
+
+

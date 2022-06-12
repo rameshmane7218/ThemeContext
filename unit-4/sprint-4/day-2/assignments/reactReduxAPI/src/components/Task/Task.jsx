@@ -3,9 +3,10 @@ import Counter from "../Counter/Counter";
 import styles from "./task.module.css";
 import removelogo from "../../assets/remove.svg";
 import { ReducerContext } from "../../context/ReducerContext";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { updateTodoStatus } from "../../store/todo/todo.actions";
+import { deleteTodo, updateTodoStatus } from "../../store/todo/todo.actions";
+import UpdateTask from "../UpdateTask/UpdateTask";
 const Task = ({ data }) => {
   // NOTE: do not delete `data-cy` key value pair
   const [isDisplay, setIsDisplay] = React.useState(false);
@@ -35,7 +36,7 @@ const Task = ({ data }) => {
           data-cy="task-checkbox"
           onChange={() =>
             // console.log(data.id,data.done);
-            dispatch(updateTodoStatus(data.id,data.done))
+            dispatch(updateTodoStatus(data.id, data.done))
           }
         />
         <div data-cy="task-text" className={data.done ? styles.strike : ""}>
@@ -47,14 +48,16 @@ const Task = ({ data }) => {
       <div className={styles.taskCounter}>
         {/* Counter here */}
         {/* <Counter data={data} /> */}
-        <i className="fa-solid fa-pen-to-square" title="Edit Todo"></i>
+        <Link to={`/todo/${data.id}/edit`}>
+          <i className="fa-solid fa-pen-to-square" title="Edit Todo"></i>
+        </Link>
         <button
           data-cy="task-remove-button"
           className={`${styles.removeBtn} ${
             isDisplay ? styles.displaybtn : ""
           }`}
           title="Remover item"
-          // onClick={}
+          onClick={() => dispatch(deleteTodo(data.id))}
         >
           <img src={removelogo} alt="Remove Logo" />
         </button>

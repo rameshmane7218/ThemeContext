@@ -14,6 +14,9 @@ import {
   UPDATE_TODO_STATUS_LOADING,
   UPDATE_TODO_STATUS_ERROR,
   UPDATE_TODO_STATUS_SUCCESS,
+  DELETE_TODO_LOADING,
+  DELETE_TODO_ERROR,
+  DELETE_TODO_SUCCESS,
 } from "./todo.types";
 
 export const getTodosAPI = () => (dispatch) => {
@@ -49,7 +52,7 @@ export const updateTodoStatus = (id,status) => (dispatch) => {
   axios
     .patch(`http://localhost:8080/todos/${id}`, {done: !status})
     .then((r) => dispatch({ type: UPDATE_TODO_STATUS_SUCCESS,payload: r.data}))
-    // .then(()=> getTodosAPI())
+    .then(()=> dispatch(getTodosAPI()))
     .catch(() => dispatch({ type: UPDATE_TODO_STATUS_ERROR }));
 };
 
@@ -63,4 +66,15 @@ export const updateTodo = (id) => (data) => (dispatch) => {
     .patch(`http://localhost:8080/todos/${id}`, {})
     .then((r) => dispatch({ type: UPDATE_TODO_SUCCESS, payload: r.data }))
     .catch(() => dispatch({ type: UPDATE_TODO_ERROR }));
+};
+
+
+export const deleteTodo = (id) => (dispatch) => {
+  dispatch({ type: DELETE_TODO_LOADING });
+
+  axios
+    .delete(`http://localhost:8080/todos/${id}`)
+    .then((r) => dispatch({ type: DELETE_TODO_SUCCESS, payload: r.data }))
+    .then(()=> dispatch(getTodosAPI()))
+    .catch(() => dispatch({ type: DELETE_TODO_ERROR }));
 };

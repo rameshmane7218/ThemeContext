@@ -28,8 +28,11 @@ const UpdateTask = () => {
         <form>
           <label htmlFor="task">Edit Task</label>
           <input type="text" />
-
+          <br />
+          <br />
+          <br />
           <label htmlFor="">select task status</label>
+          
           <div>
             <input type="radio" name="status" />
             <label htmlFor="">Completed</label>
