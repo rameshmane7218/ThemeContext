@@ -51,39 +51,42 @@ const Product = ({ product }) => {
       return ans[0] ? ans[0]?.count : 0;
     };
     setCountValue(Number(getCount()));
-  }, [product]);
+  }, [product, cartData]);
 
   return (
     <div data-cy={`product-${id}`}>
       <h3 data-cy="product-name">{product?.name}</h3>
       <h6 data-cy="product-description">{product?.description}</h6>
-      <button
-        data-cy="product-add-item-to-cart-button"
-        onClick={() => handleAddToCart(product.id)}
-      >
-        Add To Cart
-      </button>
-      <div>
+      {countValue == 0 ? (
         <button
-          data-cy="product-increment-cart-item-count-button"
-          onClick={() => handleUpdate}
+          data-cy="product-add-item-to-cart-button"
+          onClick={() => handleAddToCart(product.id)}
         >
-          +
+          Add To Cart
         </button>
-        <span data-cy="product-count">{countValue}</span>
-        <button
-          data-cy="product-decrement-cart-item-count-button"
-          onClick={() => handleUpdate}
-        >
-          -
-        </button>
-        <button
-          data-cy="product-remove-cart-item-button"
-          onClick={() => handleRemoveFromCart(product.id)}
-        >
-          Remove from cart
-        </button>
-      </div>
+      ) : (
+        <div>
+          <button
+            data-cy="product-increment-cart-item-count-button"
+            onClick={() => handleUpdate}
+          >
+            +
+          </button>
+          <span data-cy="product-count">{countValue}</span>
+          <button
+            data-cy="product-decrement-cart-item-count-button"
+            onClick={() => handleUpdate}
+          >
+            -
+          </button>
+          <button
+            data-cy="product-remove-cart-item-button"
+            onClick={() => handleRemoveFromCart(product.id)}
+          >
+            Remove from cart
+          </button>
+        </div>
+      )}
     </div>
   );
 };
