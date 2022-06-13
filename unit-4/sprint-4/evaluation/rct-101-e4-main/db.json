@@ -49,13 +49,23 @@
   "cartItems": [
     {
       "productId": 1,
-      "count": 6,
+      "count": 1,
       "id": 1
+    },
+    {
+      "productId": 2,
+      "count": 1,
+      "id": 2
     },
     {
       "productId": 3,
       "count": 1,
-      "id": 2
+      "id": 3
+    },
+    {
+      "productId": 4,
+      "count": 1,
+      "id": 4
     }
   ]
 }

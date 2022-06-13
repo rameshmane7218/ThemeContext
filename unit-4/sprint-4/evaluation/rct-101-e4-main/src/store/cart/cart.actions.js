@@ -113,8 +113,9 @@ const removeItemFromCartError = (payload) => {
 const removeItemFromCartAPI = (payload) => (dispatch) => {
   dispatch(removeItemFromCartLoading(payload));
   axios
-    .delete(`http://localhost:8080/cartItems/${payload.id}`, payload)
+    .delete(`http://localhost:8080/cartItems/${payload}`)
     .then((r) => dispatch(removeItemFromCartSuccess(r.data)))
+    .then(() => dispatch(getCartItemAPI()))
     .catch((e) => dispatch(removeItemFromCartError(e.data)));
 };
 
