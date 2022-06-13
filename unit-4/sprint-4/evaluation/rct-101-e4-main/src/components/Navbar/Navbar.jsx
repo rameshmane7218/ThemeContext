@@ -7,6 +7,7 @@ import { logoutAPI } from "../../store/auth/auth.actions";
 const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { data:cartData } = useSelector((state) => state.cart);
 
   const { data, loading, error } = useSelector((state) => state.auth);
 
@@ -18,6 +19,7 @@ const Navbar = () => {
       navigate("/login");
     }
   };
+ 
   return (
     <div data-cy="navbar" className={styles.navbarDiv}>
       <div>
@@ -27,7 +29,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div>
-        <div data-cy="navbar-cart-items-count">Cart:</div>
+        <div data-cy="navbar-cart-items-count">{`Cart: ${cartData.length}`}</div>
         <button data-cy="navbar-login-logout-button" onClick={handleNavigate}>
           {data.isAuthenticated ? "Logout" : "Login"}
         </button>
