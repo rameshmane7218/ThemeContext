@@ -1,0 +1,11 @@
+.navbarDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  margin-top: 10px;
+}
+.navbarDiv > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
