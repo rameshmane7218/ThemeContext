@@ -1,0 +1,22 @@
+Nodejs Basixs - 
+
+Node 
+
+JS - Browsers only - v8 - chrome
+
+Node - JS (rehan) 
+JS is sync,
+event driven,
+single threaded language
+    - two function will not run at one time 
+    - It will run one by one that means it is single threaded language
+    - java,c, c++ is multi threaded language.
+
+JS is sync - but to some extent: 
+JS behaves asynchronous -> 
+    - callback function  
+        - fun which is passed as an argument to otehr function 
+
+    - HOF function 
+        - function which accept callback function as an argument   
+

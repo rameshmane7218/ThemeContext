@@ -22,7 +22,7 @@ function App() {
   const [pageNotFound, setPageNotFound] = useState(true);
   
   return (
-    <div className="App">
+    <div className="App" >
       <Navbar /> 
       <section style={{ paddingTop: "60px" }}>
         <Routes>
