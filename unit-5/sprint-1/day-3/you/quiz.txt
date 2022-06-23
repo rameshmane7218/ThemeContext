@@ -1,0 +1,32 @@
+// http - protocol - set of instructions, rules, regulation
+// 3-way handshake
+// client ---------> expressing the intent --- server;
+// client <------------acknowleges intent ----- server;
+// client ----------> I want so and so -------- server;
+
+// 5 GB - file
+// comes in small small pieces or chunks or data packets;
+// 10mb 15mb and so on
+
+// 5 5GB*10 = 50GB
+// internet bandwidth 100Mbps
+
+// Verbs - action
+// It's raining in Bangalore // in general english
+
+// http verbs:
+
+// GET, POST, PUT, PATCH, DELETE
+
+// GET - get the data,
+// POST - post/ crate the data;
+// PUT - replacing that particular id/data.
+// PATCH - you modify that particular field like there are 2-3 keys u can update only one also
+// DELETE - delete a resource
+
+// idempotent - something whose value remains unchanged
+
+// is multiplication of 0 idempotent ?
+
+// Headers
+// - add more information about request and response
