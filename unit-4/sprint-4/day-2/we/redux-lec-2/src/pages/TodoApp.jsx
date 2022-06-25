@@ -7,7 +7,7 @@ const TodoApp = () => {
 
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todo.todos);
-
+  console.log(todos)
   const addNew = () => {
     let values = ref.current.value;
     //   console.log('value:', values)

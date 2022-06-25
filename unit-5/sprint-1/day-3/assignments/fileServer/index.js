@@ -11,10 +11,10 @@ const server = http.createServer((req, res) => {
       }
       let allFiles = files;
       for (let i = 0; i < allFiles.length; i++) {
-        if(allFiles[i].includes(".")){
-            res.write(`<a href=/${allFiles[i]}><li>${allFiles[i]}</li></a>`);
-        }else{
-            res.write(`<a href=/${allFiles[i]}><li><i class="fa-solid fa-folder"></i>${allFiles[i]}</li></a>`);
+        if (allFiles[i].includes(".")) {
+          res.write(`<li>${allFiles[i]}</li>`);
+        } else {
+          res.write(`<a href=/${allFiles[i]}><li>${allFiles[i]}</li></a>`);
         }
       }
       res.end();

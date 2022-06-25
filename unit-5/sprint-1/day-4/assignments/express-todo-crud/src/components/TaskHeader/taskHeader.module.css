@@ -1,0 +1,21 @@
+.taskHeader {
+  /* Sample */
+  color: white;
+  padding: 32px;
+  font-weight: 700;
+  margin: 0;
+  /* border: 1px solid blue; */
+  text-align: center;
+  background-color: #ccc;
+  background-image: linear-gradient(135deg, #79f1a4 10%, #0e5cad 100%);
+  border-radius: 10px 10px 0 0;
+
+}
+.taskHeader h1{
+  font-weight: 700;
+  margin: 0;
+}
+.taskHeader p{
+  font-weight: normal;
+  margin: 8px 0 0 0;
+}
