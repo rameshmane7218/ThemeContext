@@ -1,8 +1,22 @@
-## Todo List with useReducer
+## Todo List with Redux and Express
 
 - I have updated todo list app which is given in Sprint evaluation 1.
-- Earlier at the time of evaluation we have used props drilling techniques to pass props from one component to another
-- To overcome this I have used Context API
-- Along with that I also used useReducer to do all operations like, `Add Task` `Increment and Decrement Counter` `Delete Task` `Update Status`.
+- Along with that I also used **Redux** to do all operations like, `Add Task` `Increment and Decrement Counter` `Delete Task` `Update Status`.
 
 - By doing this overall code lines are reduced and it look clean.
+
+- **Express** is used to handle backend side of todo.
+
+## Set-up to run code on system
+
+**Start react app**
+
+    npm start
+
+**run server file (run express)**
+
+    npm run dev
+
+    (or)
+
+    nodemon server.js
