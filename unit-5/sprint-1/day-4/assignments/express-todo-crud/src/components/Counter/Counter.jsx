@@ -18,6 +18,7 @@ const Counter = ({ data }) => {
               text: data.text,
               done: data.done,
               count: Number(data.count) + 1,
+              createdAt: data.createdAt,
             })
           )
         }
@@ -26,6 +27,7 @@ const Counter = ({ data }) => {
       </button>
       <span data-cy="task-counter-value">{data.count}</span>
       <button
+        disabled={data.count <= 1}
         data-cy="task-counter-decrement-button"
         onClick={() =>
           dispatch(
@@ -34,6 +36,7 @@ const Counter = ({ data }) => {
               text: data.text,
               done: data.done,
               count: Number(data.count) - 1,
+              createdAt: data.createdAt,
             })
           )
         }

@@ -11,7 +11,7 @@ const Tasks = () => {
   let [task, setTask] = useState([]);
   const { data } = useSelector((state) => state);
   const dispatch = useDispatch();
-  console.log("data is: ", data);
+  // console.log("data is: ", data);
   useEffect(() => {
     // dispatch(getTodosAPI());
     setTask(data);

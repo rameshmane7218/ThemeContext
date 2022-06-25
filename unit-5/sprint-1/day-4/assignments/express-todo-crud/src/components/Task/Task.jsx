@@ -38,6 +38,7 @@ const Task = ({ data }) => {
                 text: data.text,
                 done: !data.done,
                 count: data.count,
+                createdAt: data.createdAt,
               })
             )
           }

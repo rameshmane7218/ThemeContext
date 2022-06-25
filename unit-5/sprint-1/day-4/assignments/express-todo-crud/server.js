@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json()); // helps to convert data into json
 app.use(express.urlencoded({ extended: true })); // helps in encoding part
 // get all todos
-app.get("/todos", (req, res) => {
+app.get("/", (req, res) => {
   // read file
   // parse data
   // send back
@@ -20,9 +20,10 @@ app.get("/todos", (req, res) => {
 });
 
 // post request
-app.post("/todos", (req, res) => {
+app.post("/", (req, res) => {
   // read req body and store in variable
-  const postData = req.body;
+  let postData = req.body;
+  postData = { ...postData, createdAt: new Date().toJSON() };
 
   // read todos data and parse it
   fs.readFile("./data.json", { encoding: "utf-8" }, (err, data) => {
@@ -34,6 +35,11 @@ app.post("/todos", (req, res) => {
     // distructure parsed data and add req body
     parsedData.todos = [...parsedData.todos, postData];
 
+    parsedData.todos = parsedData.todos.sort((a, b) => {
+      if (a.createdAt > b.createdAt) return 1;
+      if (a.createdAt < b.createdAt) return -1;
+      return 0;
+    });
     // write back in todos file
     fs.writeFile(
       "./data.json",
@@ -46,7 +52,7 @@ app.post("/todos", (req, res) => {
   });
 });
 
-app.delete("/todos/:id", (req, res) => {
+app.delete("/:id", (req, res) => {
   const { id } = req.params;
   fs.readFile("./data.json", { encoding: "utf-8" }, (err, data) => {
     if (err) {
@@ -56,6 +62,12 @@ app.delete("/todos/:id", (req, res) => {
     const deletedItem = parsedData.todos.filter((el) => el.id == id);
     parsedData.todos = parsedData.todos.filter((el) => el.id != id);
     // console.log(parsedData);
+    parsedData.todos = parsedData.todos.sort((a, b) => {
+      if (a.createdAt > b.createdAt) return 1;
+      if (a.createdAt < b.createdAt) return -1;
+      return 0;
+    });
+
     fs.writeFile(
       "./data.json",
       JSON.stringify(parsedData),
@@ -71,7 +83,7 @@ app.delete("/todos/:id", (req, res) => {
   });
 });
 
-app.put("/todos/:id", (req, res) => {
+app.put("/:id", (req, res) => {
   let { id } = req.params;
   let putData = req.body;
 
@@ -94,6 +106,12 @@ app.put("/todos/:id", (req, res) => {
       // console.log("updated data: ", updateData[0]);
       parsedData.todos = parsedData.todos.filter((el) => el.id != id);
       parsedData.todos = [...parsedData.todos, updateData[0]];
+
+      parsedData.todos = parsedData.todos.sort((a, b) => {
+        if (a.createdAt > b.createdAt) return 1;
+        if (a.createdAt < b.createdAt) return -1;
+        return 0;
+      });
 
       fs.writeFile(
         "./data.json",

@@ -61,6 +61,7 @@ export const reducer = (state = initialState, { type, payload }) => {
           loading: false,
           error: false,
         },
+        data: [...state.data, payload],
       };
     case types.ADD_TODOS_ERROR:
       return {
@@ -86,6 +87,17 @@ export const reducer = (state = initialState, { type, payload }) => {
           loading: false,
           error: false,
         },
+
+        data: [
+          ...state.data.filter((el) => {
+            if (el.id == payload.id) {
+              for (let key in el) {
+                el[key] = payload[key];
+              }
+            }
+            return el;
+          }),
+        ],
       };
     case types.UPDATE_TODOS_ERROR:
       return {
@@ -111,6 +123,7 @@ export const reducer = (state = initialState, { type, payload }) => {
           loading: false,
           error: false,
         },
+        data: [...state.data.filter((el) => el.id != payload.id)],
       };
     case types.DELETE_TODOS_ERROR:
       return {
