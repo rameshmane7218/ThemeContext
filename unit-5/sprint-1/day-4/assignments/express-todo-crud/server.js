@@ -1,8 +1,10 @@
 const fs = require("fs");
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json()); // helps to convert data into json
 app.use(express.urlencoded({ extended: true })); // helps in encoding part
 // get all todos
