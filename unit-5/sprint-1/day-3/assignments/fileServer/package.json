@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "http-server": "^14.1.1",
+    "node-static": "^0.7.11",
     "nodemon": "^2.0.18"
   }
 }
