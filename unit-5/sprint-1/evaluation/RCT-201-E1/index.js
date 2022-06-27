@@ -87,6 +87,9 @@ app.put("/products/:productId", (req, res) => {
       }
     }
     // console.log("updated product: ",updateProduct);
+    parsedProducts.products = parsedProducts.products.filter(
+      (el) => el.id != productId
+    );
     parsedProducts.products = [
       ...parsedProducts.products,
       updateProduct[0],
