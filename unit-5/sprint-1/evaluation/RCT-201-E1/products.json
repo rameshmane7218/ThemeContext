@@ -1,7 +1,8 @@
 {
   "products": [
     { "id": 2, "name": "product1", "createdAt": "2022-06-27T06:59:02.402Z" },
-    { "id": 3, "name": "product1", "createdAt": "2022-06-27T06:59:24.630Z" },
+    { "id": 3, "name": "updated", "createdAt": "2022-06-27T06:59:24.630Z" },
+    { "id": 3, "name": "updated", "createdAt": "2022-06-27T06:59:24.630Z" },
     { "id": 4, "name": "product1", "createdAt": "2022-06-27T06:59:28.858Z" },
     { "id": 5, "name": "product1", "createdAt": "2022-06-27T07:00:17.418Z" },
     { "id": 6, "name": "product1", "createdAt": "2022-06-27T07:02:55.032Z" },
