@@ -32,6 +32,20 @@ const updateTodosAPI = (payload) => (dispatch) => {
       dispatch({ type: types.UPDATE_TODOS_ERROR, payload: e.data })
     );
 };
+const patchTodosAPI = (payload) => (dispatch) => {
+  dispatch({ type: types.UPDATE_TODOS_LOADING, payload });
+  axios
+    .patch(`http://localhost:5000/${payload.id}`, {
+      text: "dsa",
+      done: false,
+    })
+    .then((r) =>
+      dispatch({ type: types.UPDATE_TODOS_SUCCESS, payload: r.data })
+    )
+    .catch((e) =>
+      dispatch({ type: types.UPDATE_TODOS_ERROR, payload: e.data })
+    );
+};
 
 const deleteTodosAPI = (payload) => (dispatch) => {
   dispatch({ type: types.DELETE_TODOS_LOADING, payload });
