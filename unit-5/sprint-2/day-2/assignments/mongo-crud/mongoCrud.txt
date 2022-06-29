@@ -5,7 +5,8 @@
 **Problem Statement :**
 - Store the given data.json file data in your mongo collection. give it any name. after storing write the following queries to fetch the data: paste these queries in document, and upload the document (text file is fine).
 
-
+Node: refer the below assignment github link, where I added all these result in Readme file for better understanding.
+link: https://github.com/masai-course/ramesh_fp02_117/tree/master/unit-5/sprint-2/day-2/assignments/mongo-crud
 
 
 **All users whose gender is male**

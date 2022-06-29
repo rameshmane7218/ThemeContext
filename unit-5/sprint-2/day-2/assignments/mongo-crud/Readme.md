@@ -1,10 +1,15 @@
 # MONGO - CRUD
 
-**Problem Statement :**
+### Problem Statement :
 - Store the given data.json file data in your mongo collection. give it any name. after storing write the following queries to fetch the data: paste these queries in document, and upload the document (text file is fine).
 
-**All users whose gender is male**
-`db.users.find({gender:"Male"}).pretty();`
+### 1. All users whose gender is male
+
+#### Command
+
+    db.users.find({gender:"Male"}).pretty();
+
+### Result
 
     {
         "_id" : ObjectId("62bc5968605460fec2d1f7e7"),
@@ -128,9 +133,13 @@
         "family_members" : 1
     }
 
-**all users whose ID is even**
+## 2. all users whose ID is even
+#### Command
 
-`db.users.find({id :{$mod : [2,0]}}).pretty()`
+    db.users.find({id :{$mod : [2,0]}}).pretty();
+
+### Result
+
 
     {
         "_id" : ObjectId("62bc5968605460fec2d1f7e6"),
@@ -299,9 +308,13 @@
     }
 
 
-**Users who currently live in Japan**
+## 3. Users who currently live in Japan
 
-`db.users.find({native:"Japan"}).pretty();`
+#### Command
+
+    db.users.find({native:"Japan"}).pretty();
+
+### Result
 
     {
         "_id" : ObjectId("62bc5968605460fec2d1f7e6"),
@@ -395,18 +408,26 @@
 
 </br>
 
-**Users who are female and live in India**
+## 4. Users who are female and live in India
 
-`db.users.find({$and: [{gender:"Female",native:"India"}]}).pretty();`
+#### Command
+
+    db.users.find({$and: [{gender:"Female",native:"India"}]}).pretty();
+
+### Result
 
     No data 
 
 
 </br>
 
-**Users who are more than 25 years old**
+## 5. Users who are more than 25 years old
 
-`db.users.find({age: {$gt: 25}}).pretty();`
+#### Command
+
+    db.users.find({age: {$gt: 25}}).pretty();
+
+### Result
 
     {
         "_id" : ObjectId("62bc5968605460fec2d1f7e7"),
@@ -630,8 +651,13 @@
     }
 
 
-**Users who are less than 50 years old and live in United State**
-`db.users.find({age: {$lt: 50},native:"United States"}).pretty();`
+## 6. Users who are less than 50 years old and live in United State
+
+#### Command
+
+    db.users.find({age: {$lt: 50},native:"United States"}).pretty();
+
+### Result
 
     {
         "_id" : ObjectId("62bc5968605460fec2d1f7e8"),
@@ -800,17 +826,27 @@
     }
 
 
-**Total number of users who want to relocate to France (count only)**
+## 7. Total number of users who want to relocate to France (count only)
 
-`db.users.find({relocate_to: "France"}).count();`
-`db.users.count({relocate_to:"France"})`
+#### Command
+
+    db.users.find({relocate_to: "France"}).count();
+or
+
+    db.users.count({relocate_to:"France"})
+
+### Result
 
     9
 
 
-**Total number of users who are from USA and want to relocate to russia, sort them by age in ascending order**
+## 8. Total number of users who are from USA and want to relocate to russia, sort them by age in ascending order.
 
-`db.users.find({$and: [{native: "United States", relocate_to: "Russia"}]}).sort({age: 1}).pretty();`
+#### Command
+
+    db.users.find({$and: [{native: "United States", relocate_to: "Russia"}]}).sort({age: 1}).pretty();
+
+### Result
 
     {
         "_id" : ObjectId("62bc5968605460fec2d1f7f4"),
@@ -935,9 +971,13 @@
     }
 
 
-**get all users, sort them by total number of family member ASC and age DESC order**
+## 9. t all users, sort them by total number of family member ASC and age DESC order
 
-`db.users.find().sort({family_members: 1, age: -1}).pretty();`
+#### Command
+
+    db.users.find().sort({family_members: 1, age: -1}).pretty();
+
+### Result
 
     {
         "_id" : ObjectId("62bc5968605460fec2d1f7f6"),
