@@ -1,0 +1,15 @@
+
+database 
+collections :
+    Products 
+    cart : 
+
+document
+    {
+        student_id  :123
+    }
+
+
+
+CRUD
+C
