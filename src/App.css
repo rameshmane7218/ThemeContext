@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  position: relative;
+  width: 1240px;
+  height: 100vh;
+  margin: auto;
+  max-height: 1024px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+@media (max-width: 900px){
+  .App{
+    width: 100%;
+  }
+}
