@@ -10,6 +10,13 @@
 - Styled components to achive good stylling.
 - Chakra ui
 
+### Dark Theme
+<img src="./src/assets/darkTheme.png" />
+
+### Light Theme
+<img src="./src/assets/lightTheme.png" />
+
+
 ### Deployed link 
 - You can use below link to see my assignment 
 - [https://euphonious-gingersnap-1e39b2.netlify.app/](https://euphonious-gingersnap-1e39b2.netlify.app/)
