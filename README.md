@@ -18,5 +18,5 @@
 
 
 ### Deployed link 
-- You can use below link to see my assignment 
+- You can use below link to take demo
 - [https://euphonious-gingersnap-1e39b2.netlify.app/](https://euphonious-gingersnap-1e39b2.netlify.app/)
