@@ -9,7 +9,7 @@ authRouter.post("/signup", async (req, res) => {
   const user = await new UserModel(req.body);
   user.save((err, success) => {
     if (err) {
-      res.status(5000).send({ message: "Error occurred" });
+      res.status(500).send({ message: "Error occurred" });
     }
     return res.status(201).send({ message: "Sign up success", token: 54321 });
   });
