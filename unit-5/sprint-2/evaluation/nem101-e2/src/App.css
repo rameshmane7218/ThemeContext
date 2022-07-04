@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+.notespageGrid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+.notespageGrid >div{
+ border: 1px solid blue;
+ border-radius: 10px;
+}

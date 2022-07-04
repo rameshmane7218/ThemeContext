@@ -1,0 +1,5 @@
+# Backend deployed link
+    https://notes-app-nem101-e2-evaluation.herokuapp.com/
+
+# Frontend deployed link
+    https://nem101-e2-web17.netlify.app/
