@@ -2,8 +2,8 @@ const express = require("express");
 const customValidator = require("./custom.validator");
 
 const app = express();
-
-app.use(customValidator);
+app.use(express.json());
+app.use("/movies",customValidator);
 
 app.get("/", (req, res) => {
     res.send("Welcome!");

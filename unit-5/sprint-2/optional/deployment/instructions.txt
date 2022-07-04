@@ -1,0 +1,18 @@
+1. Evaluation expectations etc 
+    1. Full stack app;
+    2. Backend app then move to frontend
+    3. More weightage for backend 
+    4. Test it on postman for all routes;
+    5. don't focus on UI/css 
+    6. Video.txt - Video demonstating your whole app;
+    7. If any line of code is pushed after the deadline, you might come under plagiarism suspect
+    8. By deadline, you have to submit the link - add, commit, push everything and submit 
+
+
+2. Deployment database
+    1. I will do 
+    2. Any student will do;
+    3. You can do 
+
+
+3. Deployment our Backend code 

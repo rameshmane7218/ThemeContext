@@ -1,0 +1,38 @@
+multiple users
+
+user 1 = tasks
+user 2 = tasks
+
+user1 - logins - user1tasks
+user2 - logins - user2tasks
+
+
+1. authentication
+2. tasks
+    POST / tasks
+    GET /tasks
+    PATCH /tasks/:taskId --- toggle - done/not done
+    DELETE /tasks/:taskId
+
+localhost:8000/user/:userID/tasks/1
+
+
+Routes start here : 
+
+POST /signup
+    accepts : name, username, email, password
+    return : id, token
+
+POST /login
+    accepts : username, password
+    return : id, token, name
+
+
+
+
+    {
+    "name": "postman1",
+    "username": "postman1",
+    "email": "postman1@gmail.com",
+    "password": "postman1@123"
+}
